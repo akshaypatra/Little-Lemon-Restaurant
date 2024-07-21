@@ -89,7 +89,7 @@ DATABASES = {
 }
 
 # DATABASES["default"]=dj_database_url.parse("postgresql://little_lemon_db_g1sm_user:dnRhLnG2EIYTJU2Mh1Tswm09v4MlzBqj@dpg-cqdst208fa8c73drmvb0-a.oregon-postgres.render.com/little_lemon_db_g1sm")
-database_url=os.environ.get("DATABASES")
+database_url=os.environ.get("DATABASE_URL")
 
 DATABASES["default"]=dj_database_url.parse(database_url)
 
