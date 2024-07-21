@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import dj_database_url
-import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -21,12 +20,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
-#SECRET_KEY = 'django-insecure-r-%0eqcja86asp_+*1@3d6t9wm65$7^p*v^m961p@)w7*3ob0n'
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG","FALSE").lower()=="true"
+SECRET_KEY = 'django-insecure-r-%0eqcja86asp_+*1@3d6t9wm65$7^p*v^m961p@)w7*3ob0n'
 
-ALLOWED_HOSTS =os.environ.get("ALLOWED_HOSTS").split(" ")
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = False
+
+ALLOWED_HOSTS =['https://little-lemon-restaurant-r3mw.onrender.com',  # Replace with your actual Render domain
+    'localhost',
+    '127.0.0.1' ]
 
 
 # Application definition
@@ -85,9 +86,7 @@ DATABASES = {
     }
 }
 
-database_url=os.environ.get("DATABASES")
-
-DATABASES["default"]=dj_database_url.parse(database_url)
+DATABASES["default"]=dj_database_url.parse("postgresql://little_lemon_db_g1sm_user:dnRhLnG2EIYTJU2Mh1Tswm09v4MlzBqj@dpg-cqdst208fa8c73drmvb0-a.oregon-postgres.render.com/little_lemon_db_g1sm")
 
 # The settings for media files have been updated for the Graded assessment
 MEDIA_URL = '/media/'
