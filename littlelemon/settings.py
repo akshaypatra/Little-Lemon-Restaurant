@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-
+import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,11 +25,7 @@ SECRET_KEY = 'django-insecure-r-%0eqcja86asp_+*1@3d6t9wm65$7^p*v^m961p@)w7*3ob0n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'little-lemon-restaurant-3.onrender.com',
-    '127.0.0.1',
-    'localhost',
-    ]
+ALLOWED_HOSTS =[]
 
 
 # Application definition
@@ -76,6 +72,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'littlelemon.wsgi.application'
 
+# postgresql://little_lemon_db_g1sm_user:dnRhLnG2EIYTJU2Mh1Tswm09v4MlzBqj@dpg-cqdst208fa8c73drmvb0-a.oregon-postgres.render.com/little_lemon_db_g1sm
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
@@ -86,6 +83,8 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+DATABASES["default"]=dj_database_url.parse("postgresql://little_lemon_db_g1sm_user:dnRhLnG2EIYTJU2Mh1Tswm09v4MlzBqj@dpg-cqdst208fa8c73drmvb0-a.oregon-postgres.render.com/little_lemon_db_g1sm")
 
 # The settings for media files have been updated for the Graded assessment
 MEDIA_URL = '/media/'
