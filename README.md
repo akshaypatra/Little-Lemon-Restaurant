@@ -11,17 +11,13 @@ It provides a seamless browsing experience for customers looking to explore the 
 
 
 #### -> Responsive Design:  
-  Ensures optimal viewing on all devices including desktops, tablets, and smartphones.
-  
+  Ensures optimal viewing on all devices including desktops, tablets, and smartphones. 
 #### -> Dynamic Menu: 
   Showcases the restaurant’s offerings, with sections for appetizers, mains, desserts, and drinks.
-  
 #### -> Online Reservations: 
   Customers can easily book a table through an integrated reservation form.
-
 #### -> Contact Information: 
-  Location, operating hours, and contact details, along with a built-in contact form.
-  
+  Location, operating hours, and contact details, along with a built-in contact form. 
 #### -> Google Maps Integration: 
   Provides easy directions to the restaurant.
 
@@ -29,9 +25,9 @@ It provides a seamless browsing experience for customers looking to explore the 
 
 
 ### Tech Stack
-Frontend: HTML5, CSS3, JavaScript, Bootstrap
-Backend: Django,DRF
-Database: Postgre SQL
+-> Frontend: HTML5, CSS3, JavaScript, Bootstrap
+-> Backend: Django,DRF
+-> Database: Postgre SQL
 
 
 ### WEBSITE OVERVIEW :
