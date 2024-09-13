@@ -25,9 +25,9 @@ It provides a seamless browsing experience for customers looking to explore the 
 
 
 ### Tech Stack
--> Frontend: HTML5, CSS3, JavaScript, Bootstrap
--> Backend: Django,DRF
--> Database: Postgre SQL
+#### -> Frontend: HTML5, CSS3, JavaScript, Bootstrap
+#### -> Backend: Django,DRF
+#### -> Database: Postgre SQL
 
 
 ### WEBSITE OVERVIEW :
